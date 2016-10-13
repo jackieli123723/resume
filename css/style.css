@@ -4975,7 +4975,8 @@ body,html {
 body {
 	background-color: #eee;
 	color: #33383A;
-	font-size: 15px
+	font-size: 15px;
+	padding-top: 124px;
 }
 
 h1.page-title {
@@ -5127,6 +5128,29 @@ h2.title-between {
 .navbar-default {
 	// background-color: rgba(255,255,255,.5);
 	height: 100px
+}
+
+.navbar-default{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+    -o-transition: opacity 0.5s, -o-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar-default.is-hide{
+    -webkit-transform: translate3d(0, -60px, 0);
+    -moz-transform: translate3d(0, -60px, 0);
+    -ms-transform: translate3d(0, -60px, 0);
+    -o-transform: translate3d(0, -60px, 0);
+    transform: translate3d(0, -60px, 0);
+    opacity: 0;
 }
 
 .navbar-brand {

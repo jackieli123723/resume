@@ -2,17 +2,30 @@ $(function(){
 
   window.onscroll = function() {
       var scrollTop = document.body.scrollTop;
+      var he =100;
       if (scrollTop >= 100) {
           $(".toTop").show();
       } else {
           $(".toTop").hide();
       }
+
+       if (scrollTop >= 100) {
+          $('.navbar-default').addClass('is-hide');
+      } else {
+          $('.navbar-default').removeClass('is-hide');
+      }
+
+      
   }
   $(".toTop").click(function() {
       $('body,html').animate({ scrollTop: 0 }, 500);
       return false;
   })
+
+
 })
+
+
 
 
 
