@@ -120,13 +120,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <form method="GET" action="search" accept-charset="UTF-8">
-                        <input type="text" name="q" class="search-box form-control" placeholder="搜索..." value="">
+                        <input type="text" name="q" class="search-box form-control" placeholder="搜索..." value="" >
                     </form>
                 </div>
             </div>
             <div class="row trick-container">
-                <div v-for="(item, index) in production" class="trick-card col-lg-4 col-md-6 col-sm-6 col-xs-12 fadeInUp animated">
-                    <div class="trick-card-inner js-goto-trick">
+               <div v-for="(item, index) in production"  class="trick-card col-lg-4 col-md-6 col-sm-6 col-xs-12 fadeInUp animated">
+                     <div class="trick-card-inner js-goto-trick" >
                         <a class="trick-card-title" v-bind:href="item.href" target="_blank">
                             {{item.productionNmae}}
                         </a>
@@ -138,12 +138,12 @@
                             <div class="trick-card-stat-block text-right"><span class="fa fa-heart"></span>{{item.heart}}</div>
                         </div>
                         <div class="trick-card-tags clearfix">
-                            <a v-for="tag in item.tags" href="javascript:;" class="tag" v-bind:title="tag">
+                              <a v-for="tag in item.tags" href="javascript:;" class="tag" v-bind:title="tag">
                                 {{tag}}
                               </a>
                         </div>
                     </div>
-                </div>
+               </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <ul class="pagination">
@@ -154,26 +154,36 @@
                         </ul>
                     </div>
                 </div>
+                
                 <div id="demo">
-                    <form id="search">
-                        Search
-                        <input v-model="searchQuery">
-                    </form>
-                    <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery"></demo-grid>
+                  <form id="search">
+                    Search <input v-model="searchQuery">
+                  </form>
+                  <demo-grid
+                    :data="gridData"
+                    :columns="gridColumns"
+                    :filter-key="searchQuery">
+                  </demo-grid>
+
                 </div>
+              
             </div>
     </template>
+
     <template id="grid-template">
-        <table>
+          <table>
+    
             <tbody>
-                <tr v-for="entry in data  ">
-                    <td v-for="key in columns  ">
-                        {{entry[key]}}
-                    </td>
-                </tr>
+              <tr v-for="entry in data ">
+                <td v-for="key in columns  ">
+                  {{entry[key]}}
+                </td>
+              </tr>
             </tbody>
-        </table>
+          </table>
     </template>
+
+
     <template id="skill">
         <div class="row skill">
             <div class="three columns header-col">
@@ -249,11 +259,11 @@
         <p>register</p>
     </template>
     <template id="login">
-        <ul class="reminders">
-            <li v-for='(item, index) in items'>
-                <p>{{ index + 1 }}.{{ item }} </p>
-            </li>
-        </ul>
+    <ul class="reminders">
+        <li v-for='(item, index) in items'>
+            <p>{{ index + 1 }}.{{ item }} </p>
+        </li>
+    </ul>
     </template>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
