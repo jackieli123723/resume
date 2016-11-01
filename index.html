@@ -112,20 +112,20 @@
                     <div class="row push-down">
                         <div class="col-lg-12">
                             <ul class="nav nav-pills">
-                                <li class="active"><a href="">最新</a></li>
-                                <li><a href="popular">热门</a></li>
+                                <li class="active" @click="sortBy('eye')" ><a href="javascript:;">最新</a></li>
+                                <li @click="sortBy('comment')"><a href="javascript:;">热门</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <form method="GET" action="search" accept-charset="UTF-8">
-                        <input type="text" name="q" class="search-box form-control" placeholder="搜索..." value="">
+                        <input type="text" name="q" class="search-box form-control" placeholder="项目名称检索" value="" v-model="searchQuery">
                     </form>
                 </div>
             </div>
             <div class="row trick-container">
-                <div v-for="(item, index) in production" class="trick-card col-lg-4 col-md-6 col-sm-6 col-xs-12 fadeInUp animated">
+                <div v-for="(item, index) in filteredUsers" class="trick-card col-lg-4 col-md-6 col-sm-6 col-xs-12 fadeInUp animated">
                     <div class="trick-card-inner js-goto-trick">
                         <a class="trick-card-title" v-bind:href="item.href" target="_blank">
                             {{item.productionNmae}}
@@ -154,26 +154,10 @@
                         </ul>
                     </div>
                 </div>
-                <div id="demo">
-                    <form id="search">
-                        Search
-                        <input v-model="searchQuery">
-                    </form>
-                    <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery"></demo-grid>
-                </div>
+         
             </div>
     </template>
-    <template id="grid-template">
-        <table>
-            <tbody>
-                <tr v-for="entry in data  ">
-                    <td v-for="key in columns  ">
-                        {{entry[key]}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </template>
+
     <template id="skill">
         <div class="row skill">
             <div class="three columns header-col">
@@ -249,12 +233,18 @@
         <p>register</p>
     </template>
     <template id="login">
-        <ul class="reminders">
-            <li v-for='(item, index) in items'>
-                <p>{{ index + 1 }}.{{ item }} </p>
-            </li>
-        </ul>
+     <div >
+           <input v-model="searchQuery">
+
+      <ul>
+        <li v-for="user in filteredUsers" >
+          {{ user.name }}
+          
+        </li>
+      </ul>
+     </div>
     </template>
+
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/particles.min.js"></script>
