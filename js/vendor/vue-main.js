@@ -163,24 +163,28 @@ const Register = Vue.component('Register', {
 
 const Login = Vue.component('Login', {
     template: '#login',
-    computed: {
-        filteredUsers: function () {
-            var self = this
-            return self.users.filter(function (user) {
-              return user.name.indexOf(self.searchQuery) !== -1
-            })
-          }
-    },
-    data: function() {
-        return {
-            searchQuery:'',
-            users: [
-                { name: 'hruce' },
-                { name: 'Chuck' },
-                { name: 'Jackie' }
-            ]
-        }
-    }
+    // computed: {
+    //     filteredUsers: function () {
+    //         var self = this
+    //         return self.users.filter(function (user) {
+    //           return user.name.indexOf(self.searchQuery) !== -1
+    //         })
+
+    //         self.show = !self.show
+
+    //     }
+    // },
+    // data: function() {
+    //     return {
+    //         searchQuery:'',
+    //         show:0,
+    //         users: [
+    //             { name: 'hruce' },
+    //             { name: 'Chuck' },
+    //             { name: 'Jackie' }
+    //         ]
+    //     }
+    // }
 });
 
 
@@ -224,6 +228,13 @@ const router = new VueRouter({
 //     ]
 // }
 
+
+//等效下面
+// const app = new Vue({
+//     router
+// }).$mount('#app')
+
 const app = new Vue({
-    router
-}).$mount('#app')
+    router,
+    el: "#app"
+})

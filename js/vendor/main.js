@@ -67,6 +67,76 @@ $(function() {
     });
 
 
+    var form = $("#form");
+    $("#subbtn").click(function(){
+        var nick = form.find("input[name=nick]").val();
+        if(!nick){
+            showerr("请填写昵称");
+            return;
+        }
+        if(nick.length<2 || nick.length>12){
+            showerr("昵称2到12个字符");
+            return;
+        }
+        var phone = form.find("input[name=phone]").val();
+        if(!phone){
+            showerr("请填写手机号");
+            return;
+        }
+        if(!phoneCheck(phone)){
+            showerr("手机格式不正确");
+            return;
+        }
+        var password = form.find("input[name=password]").val();
+        if(!password){
+            showerr("请填写密码");
+            return;
+        }
+        if(password.length<6 || password.length>12){
+            showerr("密码6到12位");
+            return;
+        }
+        var repassword = form.find("input[name=repassword]").val();
+        if(!repassword){
+            showerr("请填确认密码");
+            return;
+        }
+        if(password!=repassword){
+            showerr("密码与确认密码不一致");
+            return;
+        }
+        var data = {
+            nick:nick,
+            email:email,
+            password:password
+        }
+        hiderr();
+    
+    });
+    
+    var emailCheck =function(email) {  
+        var pattern = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;  
+        if (!pattern.test(email)) 
+            return false;  
+        return true;  
+    }
+
+    var phoneCheck = function(s) {
+              var patrn = /^(((10[0-9]{1})|(13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+              if (!patrn.exec(s)) return false;
+              return true;
+          }
+ 
+    var showerr=function(ifo){
+        $(".error").show();
+        $(".errorinfo").html(ifo);
+    }
+    var hiderr =function(){
+        $(".error").hide();
+    }
+
+
+
 })
 
 

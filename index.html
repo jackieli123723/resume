@@ -10,6 +10,8 @@
     <title> 李立冬个人简历 -by-vue.js</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link href="http://cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="share.js/dist/css/share.min.css">
@@ -112,7 +114,7 @@
                     <div class="row push-down">
                         <div class="col-lg-12">
                             <ul class="nav nav-pills">
-                                <li class="active" @click="sortBy('eye')" ><a href="javascript:;">最新</a></li>
+                                <li class="active" @click="sortBy('eye')"><a href="javascript:;">最新</a></li>
                                 <li @click="sortBy('comment')"><a href="javascript:;">热门</a></li>
                             </ul>
                         </div>
@@ -154,10 +156,8 @@
                         </ul>
                     </div>
                 </div>
-         
             </div>
     </template>
-
     <template id="skill">
         <div class="row skill">
             <div class="three columns header-col">
@@ -230,21 +230,64 @@
         </div>
     </template>
     <template id="register">
-        <p>register</p>
+        <div class="login-cont bgn">
+            <div class="login-tit">
+             <router-link to="/register">注册 西门互联</router-link>
+            </div>
+            <div class="padding30">
+                <div class="login-form" id="form">
+                    <div class="error"><i class="iconfont"></i><span class="errorinfo"></span></div>
+                    <div class="login-cont-itm">
+                        <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                        <input type="text" name="nick" placeholder="昵称" class="input-text1">
+                    </div>
+                    <div class="login-cont-itm">
+                        <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                        <input type="text" name="phone" placeholder="手机" class="input-text1">
+                    </div>
+                    <div class="login-cont-itm">
+                        <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                        <input type="password" name="password" placeholder="密码" class="input-text1">
+                    </div>
+                    <div class="login-cont-itm">
+                        <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                        <input type="password" name="repassword" placeholder="确认密码" class="input-text1">
+                    </div>
+                    <div><a href="javascript:;" id="subbtn" class="i_btn i_btn2">注册</a></div>
+                    <i class="sp10"></i>
+                    <div class="reg-c">
+                            <router-link to="/login" class="r">已注册？  登录</router-link>
+                    </div>
+                    <i class="sp20"></i>
+                </div>
+            </div>
+        </div>
     </template>
     <template id="login">
-     <div >
-           <input v-model="searchQuery">
-
-      <ul>
-        <li v-for="user in filteredUsers" >
-          {{ user.name }}
-          
-        </li>
-      </ul>
-     </div>
+  
+        <div class="login-cont bgn">
+        <div class="login-tit"> <router-link to="/login">登录 西门互联</router-link></div>
+        <div class="padding30">
+            <div class="login-form" id="form">
+                <div class="error"><i class="iconfont"></i><span class="errorinfo"></span></div>
+                <div class="login-cont-itm">
+                    <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                    <input type="text" name="nick" placeholder="昵称/邮箱" class="input-text1">
+                </div>
+                <div class="login-cont-itm">
+                    <label for="inputEmail" class="login-label"><i class="iconfont"></i></label>
+                    <input type="password" name="password" placeholder="密码" class="input-text1">
+                </div>
+                <div><a href="javascript:;" class="i_btn i_btn2" id="subBtn">立即登录</a></div>
+                <i class="sp20"></i>
+                <div class="reg-c">
+                    <router-link to="/register" class="r">注册账号</router-link>
+                </div>
+                <i class="sp20"></i>
+            </div>
+        </div>
+    </div>
     </template>
-
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/particles.min.js"></script>
