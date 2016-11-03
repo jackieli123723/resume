@@ -111,9 +111,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <form method="GET" action="search" accept-charset="UTF-8">
-                        <input type="text" name="q" class="search-box form-control" placeholder="项目名称检索" value="" v-model="searchQuery">
-                    </form>
+                    <input type="text" name="q" class="search-box form-control" placeholder="项目名称检索" value="" v-model="searchQuery">
                 </div>
             </div>
             <div class="row trick-container">
@@ -149,162 +147,120 @@
             </div>
     </template>
     <template id="skill">
-        <div class="row skill">
-            <div class="three columns header-col">
-                <h2><span>Skills</span></h2>
-            </div>
-            <div class="nine columns main-col">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                </p>
-                <div class="bars">
-                    <ul class="skills">
-                        <li><span class="bar-expand photoshop wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>Photoshop</em></li>
-                        <li><span class="bar-expand illustrator wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>Illustrator</em></li>
-                        <li><span class="bar-expand wordpress wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>Wordpress</em></li>
-                        <li><span class="bar-expand css wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>CSS</em></li>
-                        <li><span class="bar-expand html5 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>HTML5</em></li>
-                        <li><span class="bar-expand jquery wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></span><em>jQuery</em></li>
-                    </ul>
+        <div class="my-skills">
+            <div class="cont">
+                <div class="skills fadeInLeft animated">
+                    <h2> web前端技能</h2>
+                    <p> 1. 掌握了基本web前端开发技术：HTML、CSS、JavaScript、DOM、BOM、AJAX等，了解不同浏览器上的兼容情况、渲染原理和存在的Bug。</p>
+                    <p> 2. 掌握了网站性能优化、SEO和服务器端开发技术的基础知识。</p>
+                    <p> 3. 学会运用各种web前端开发与测试工具进行辅助开发。</p>
+                    <p> 4. 掌握技术层面的知识，还掌握理论层面的知识，包括代码的可维护性、组件的易用性、分层语义模板和浏览器分级支持等。</p>
+                    <a href="http://lilidong.cn" target="_blank">
+                        <button>联系</button>
+                    </a>
                 </div>
-                <!-- end skill-bars -->
+                <div class="progress fadeInRight animated">
+                    <div class="tec">
+                        <h3>Html5/Css3</h3>
+                        <div>
+                            <span class="one">80% &nbsp;</span>
+                        </div>
+                        <h3>Javascript/Es6/Bable</h3>
+                        <div>
+                            <span class="one">75% &nbsp;</span>
+                        </div>
+                        <h3>Scss/Less/Stylus</h3>
+                        <div>
+                            <span class="one">85% &nbsp;</span>
+                        </div>
+                        <h3>Gulp/Grunt</h3>
+                        <div>
+                            <span class="one">45% &nbsp;</span>
+                        </div>
+                        <h3>PHP</h3>
+                        <div>
+                            <span class="two"> 55% &nbsp;</span>
+                        </div>
+                        <h3>Node</h3>
+                        <div>
+                            <span class="three">43% &nbsp;</span>
+                        </div>
+                        <h3>Mongodb/webpack/vue/react/Angular</h3>
+                        <div>
+                            <span class="three">43% &nbsp;</span>
+                        </div>
+                        <h3>Git</h3>
+                        <div>
+                            <span class="three">63% &nbsp;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- main-col end -->
         </div>
     </template>
     <template id="work">
         <div>
-      
-            <section id="cd-timeline" class="cd-container">
-                <div class="cd-timeline-block fadeInLeft animated">
-                    <div class="cd-timeline-img cd-picture">
-                        <img src="img/cd-icon-picture.svg" alt="Picture">
+            <div class="row push-down">
+                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
+                    <div class="row push-down">
+                        <div class="col-lg-12">
+                            <ul class="nav nav-pills">
+                                <p>找到<strong id="total">{{countAllArticles()}}</strong>条记录</p>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content">
-                        <h2>html5时间表 1</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Jan 14</span>
-                    </div>
-                    <!-- cd-timeline-content -->
                 </div>
-                <!-- cd-timeline-block -->
-                <div class="cd-timeline-block fadeInRight animated">
-                    <div class="cd-timeline-img cd-movie bounce-in">
-                        <img src="img/cd-icon-movie.svg" alt="Movie">
-                    </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content bounce-in">
-                        <h2>html5时间表 2</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Jan 18</span>
-                    </div>
-                    <!-- cd-timeline-content -->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <input v-model='searchQuery' type="text" name="q" placeholder="工作经历关键字检索" value="" class="search-box form-control">
                 </div>
-                <!-- cd-timeline-block -->
-                <div class="cd-timeline-block fadeInLeft animated">
-                    <div class="cd-timeline-img cd-picture bounce-in">
-                        <img src="img/cd-icon-picture.svg" alt="Picture">
+            </div>
+            <section id="cd-timeline" class="cd-container" v-if='anyArticle()'>
+                <div class="cd-timeline-block animated" v-for='(dateWithArticles, date , index) in searchedArticles' v-bind:class="{ 'fadeInRight': ((index % 2) === 0 ? 0 :1 ) ,'fadeInLeft': ((index % 2) === 0 ? 1 :0 )  }">
+                    <div class="cd-timeline-img cd-picture" v-if='dateWithArticles.length > 0'>
+                        <img v-if="index + 1 == 1" src="img/ilong_logo.png" />
+                        <img v-if="index + 1 == 2" src="img/bly.jpg" />
+                        <img v-if="index + 1 == 3" src="img/dq.jpg" />
                     </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content bounce-in">
-                        <h2>html5时间表 3</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Jan 24</span>
+                    <div class="cd-timeline-content item-box" v-if='dateWithArticles.length > 0'>
+                        <h2 v-if="index + 1 == 1">成都龙渊网络科技有限公司</h2>
+                        <h2 v-if="index + 1 == 2">成都市比邻优信息技术有限公司</h2>
+                        <h2 v-if="index + 1 == 3">成都中科大旗软件有限公司</h2>
+                        <div v-for='article in dateWithArticles'>
+                            <p class="item-box">{{ article.published_at }} -- {{ article.title }}<i>({{article.slug}})</i><span>{{ article.teaser }}</span></p>
+                        </div>
+                        <a href="javascript:;" class="cd-read-more">展开全部</a>
+                        <span class="cd-date">{{ date }}</span>
                     </div>
-                    <!-- cd-timeline-content -->
                 </div>
-                <!-- cd-timeline-block -->
-                <div class="cd-timeline-block fadeInRight animated">
-                    <div class="cd-timeline-img cd-location bounce-in">
-                        <img src="img/cd-icon-location.svg" alt="Location">
-                    </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content bounce-in">
-                        <h2>html5时间表 4</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Feb 14</span>
-                    </div>
-                    <!-- cd-timeline-content -->
-                </div>
-                <!-- cd-timeline-block -->
-                <div class="cd-timeline-block fadeInLeft animated">
-                    <div class="cd-timeline-img cd-location bounce-in">
-                        <img src="img/cd-icon-location.svg" alt="Location">
-                    </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content bounce-in">
-                        <h2>html5时间表 5</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Feb 18</span>
-                    </div>
-                    <!-- cd-timeline-content -->
-                </div>
-                <!-- cd-timeline-block -->
-                <div class="cd-timeline-block fadeInRight animated">
-                    <div class="cd-timeline-img cd-movie bounce-in">
-                        <img src="img/cd-icon-movie.svg" alt="Movie">
-                    </div>
-                    <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content bounce-in">
-                        <h2>html5时间表 6</h2>
-                        <p>jQuery 团队在官博中再次提醒用户，jQuery 2.0 不再支持IE 6/7/8 了，但是 jQuery 1.9 会继续支持。因为旧版 IE 浏览器在整个互联网中还有很大部分市场，所以他们非常期望大部分网站能继续使用 jQuery 1.x 一段时间。jQuery 团队也将同时支持 jQuery 1.x 和 2.x 。1.9 和 2.0 版的 API 是相同的，所以不必因为你们网站还在用 jQuery 1.9，就感觉好像错过了什么，或者是落后了。</p>
-                        <a href="http://www.jq22.com/demo/html5time20160517/#" class="cd-read-more">阅读更多</a>
-                        <span class="cd-date">Feb 26</span>
-                    </div>
-                    <!-- cd-timeline-content -->
-                </div>
-                <!-- cd-timeline-block -->
             </section>
+            <p v-else id="nodata">没有找到符和条件的工作记录</p>
         </div>
     </template>
     <template id="education">
         <div class="row education">
-            <div class="three columns header-col">
-                <h2><span>Education</span></h2>
-            </div>
             <div class="nine columns main-col">
                 <div class="education-timeline">
-                    <ul class="timeline wow fadeInUp animated">
+                    <ul>
                         <li class="timeline-event">
                             <label class="timeline-event-icon"></label>
                             <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">January 2008 - December 2012</p>
-                                <h3>University of Engineering</h3>
-                                <h4>Bachelor of Science</h4>
-                                <p><strong>Computer Science &amp; Engineering</strong>
-                                    <br> Completed graduation from University of Engineering with the major of Computer Science &amp; Engineering. Achieved the Dean Award for extra-ordinary result.</p>
+                                <p class="timeline-event-thumbnail">2007/09-2010/09</p>
+                                <h3>宣汉南坝中学</h3>
+                                <p><strong>Grade A+</strong>
                             </div>
                         </li>
                         <li class="timeline-event">
                             <label class="timeline-event-icon"></label>
                             <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">January 2006 - December 2008</p>
-                                <h3>College of Awesomeness</h3>
-                                <h4>A Level</h4>
-                                <p><strong>Grade A++</strong>
-                                    <br> Completed A Level from College of Awesomeness with and finished A Level with A++. Achieved the Principal Award for extra-ordinary result.</p>
-                            </div>
-                        </li>
-                        <li class="timeline-event">
-                            <label class="timeline-event-icon"></label>
-                            <div class="timeline-event-copy">
-                                <p class="timeline-event-thumbnail">January 2000 - December 2006</p>
-                                <h3>School of Amusement</h3>
-                                <h4>O Level</h4>
-                                <p><strong>Grade A++</strong>
-                                    <br> Completed O Level from College of Amusement with and finished O Level with A++. Achieved the Principal Award for extra-ordinary result.</p>
+                                <p class="timeline-event-thumbnail">2010/09-2014/09</p>
+                                <h3>西南科技大学</h3>
+                                <h4>管理学学士学位</h4>
+                                <p><strong>Grade A</strong></p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <!-- Education Timeline End -->
             </div>
-            <!-- main-col end -->
         </div>
     </template>
     <template id="register">
@@ -371,6 +327,7 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/particles.min.js"></script>
     <script src="js/vendor/jquery.nicescroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.js"></script>
     <script src="js/vendor/main.js"></script>
     <script src="js/vendor/vue2.0.3.js"></script>
     <script src="js/vendor/vue-router2.0.0.js"></script>

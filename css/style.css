@@ -764,7 +764,8 @@ address,dl {
 }
 
 ol,ul {
-	margin-bottom: 12px
+	margin-bottom: 12px;
+	list-style-type: none;
 }
 
 .list-inline {
