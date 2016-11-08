@@ -44,7 +44,7 @@ const Production = Vue.component('Production', {
                     "localStorage"
                 ]
             }, {
-                "href": "http://m.bilinyou.com/",
+                "href": "http://m.yuzhelin.com/",
                 "author": "Jackieli",
                 "productionNmae": "比邻优O2O商城移动端（app）",
                 "day": 33,
